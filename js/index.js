@@ -65,7 +65,6 @@ $(document).ready(function() {
 			card.find(".card-" + k).text(e[k]);
 		var yOffset = 240 + (i * 5)/cards.length * 1000;
 		var timeOffset = 0.5;
-		console.log(yOffset);
 		card.css("transform", "translateY(" + yOffset + "px) rotate(30deg)");
 		card.css("transition", "all " + timeOffset + "s cubic-bezier(0,.59,.44,.98)");
 		parent.append(card);
@@ -88,6 +87,10 @@ $(document).ready(function() {
 	        	if(visible > 200)
 	        		$(this).find(".page-title").css("font-size", Math.sqrt(visible) * 3);
 	        }
+
+	        var maxH = 1000;
+	        visible = visible <= maxH? visible: maxH;
+	        $(".background-image-over-layer").css("opacity", visible/maxH);
 	    });
 	});
 
