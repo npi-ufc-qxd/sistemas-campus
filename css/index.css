@@ -1,7 +1,116 @@
-.card {
-	margin-bottom: 16px !important;
+.background-image {
+	background: url("../img/background-01.jpg") center / cover;
+	height: 90vh;
+	position: absolute;
+	top: 0;
+	left: 0; right: 0;
+	z-index: -1;
 }
 
-.card-image {
-	min-height: 240px !important;
+.page-title-container {
+	position: absolute;
+	height: 80vh;
+}
+
+.page-title {
+	position: absolute;
+	bottom: 0;
+	left: 0; right: 0;
+	height: 80vh;
+	z-index: 1;
+	font-size: 52px;
+	padding: 20px;
+}
+
+.page-title > div {
+	width: 100%;
+}
+
+.page-title-text {
+	width: 100%;
+}
+
+.page-title .bold {
+	font-weight: bold;
+}
+
+.page-title .thin {
+	font-weight: 200;
+}
+
+.brasao {
+	height: 128px;
+	width: 96px;
+	background: url("../img/brasao.png") center / cover;
+	margin: auto;
+	z-index: 1;
+}
+
+.mdl-grid {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.foreground {
+	position: fixed;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	z-index: 1000;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.card {
+	margin: 8px !important;
+}
+
+.card:hover {
+	margin: 8px !important;
+	box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3);
+}
+
+.row .mcol.s12 {
+    width: calc(100% - 16px);
+}
+
+@media only screen and (min-width: 601px) {
+	.row .mcol.m6 {
+	    width: calc(50% - 16px);
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	.row .mcol.l4 {
+	    width: calc(33.333333% - 16px);
+	}
+}
+
+.main-row > div:nth-child(2) {
+	margin-top: 80vh;
+}
+
+.card-icon {
+	padding: 20px;
+	font-size: 128px;
+	width: 100%;
+	text-align: center;
+}
+
+.card-name {
+	font-size: 24px;
+	font-weight: bold;
 }
