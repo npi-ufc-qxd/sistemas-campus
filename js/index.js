@@ -6,49 +6,49 @@ $(document).ready(function() {
 		{ 
 			name: "GPA - Extensão", 
 			description: "Sistema de Gestão de Ações de Extensão do Campus da UFC em Quixadá.", 
-			image: "img/sippa.png", 
+			image: "img/icon_08.png", 
 			link: "https://homologacaosistemas.quixada.ufc.br/extensao"
 		}, 
 		{ 
 			name: "GPA - Pesquisa", 
 			description: "Sistema de Projetos de Pesquisa.", 
-			image: "img/sippa.png", 
+			image: "img/icon_09.png", 
 			link: "https://sistemas.quixada.ufc.br/gpa-pesquisa"
 		}, 
 		{ 
 			name: "Contest", 
 			description: "Controle de Eventos de Submissão", 
-			image: "img/sippa.png", 
+			image: "img/icon_11.png", 
 			link: "https://sistemas.quixada.ufc.br/contest"
 		}, 
 		{ 
 			name: "SINUTRI", 
 			description: "Sistema de Nutrição.", 
-			image: "img/sippa.png", 
+			image: "img/icon_10.png", 
 			link: "https://sistemas.quixada.ufc.br/sinutri"
 		}, 
 		{ 
 			name: "GAL", 
 			description: "Sistema Gestão de Aquisição de Livros.", 
-			image: "img/sippa.png", 
+			image: "img/icon_11.png", 
 			link: "https://sistemas.quixada.ufc.br/gal"
 		}, 
 		{ 
 			name: "Gestão de Estágio", 
 			description: "Sistema de Gestão de Estágio", 
-			image: "img/sippa.png", 
+			image: "img/icon_12.png", 
 			link: "https://sistemas.quixada.ufc.br/gestao-estagio/"
 		}, 		
 		{ 
 			name: "Base Centralizada", 
 			description: "Sistema com as informações de dados pessoais de alunos e servidores do campus.", 
-			image: "img/sippa.png", 
+			image: "img/icon_04_02.png", 
 			link: "http://identidadepessoa.intranet/"
 		},
 		{ 
 			name: "Cadastro Aluno", 
 			description: "Sistema para cadastro de aluno na base centralizada.", 
-			image: "img/sippa.png", 
+			image: "img/icon_12.png", 
 			link: "http://cadastroaluno.intranet/"
 		}		
 	];
@@ -60,7 +60,7 @@ $(document).ready(function() {
 	cards.forEach(function(e, i) {
 		var card = toClone.clone();
 		for(k in e)
-			k == "image"? card.find(".card-" + k).attr("src", e[k]): 
+			k == "image"? card.find(".card-" + k).find("img").attr("src", e[k]): 
 			k == "link"? card.attr("href", e[k]):
 			card.find(".card-" + k).text(e[k]);
 		var yOffset = 240 + (i * 5)/cards.length * 1000;
@@ -70,28 +70,28 @@ $(document).ready(function() {
 		parent.append(card);
 	});
 
+	var ptc = $('.page-title-container');
 	$(window).on('scroll resize', function() {
-		$('.page-title-container').each(function(_, el) {
-	        var $el = $(el),
-	            scrollTop = $(window).scrollTop(),
-	            scrollBot = scrollTop + $(window).height(),
-	            elTop = $el.offset().top,
-	            elBottom = elTop + $el.outerHeight(),
-	            visibleTop = elTop < scrollTop ? scrollTop : elTop,
-	            visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
-	        var visible = visibleBottom - visibleTop > 0? visibleBottom - visibleTop: 0;
-	        
-	        if(visible > 128) {
-	        	$(this).find(".page-title").height(visible);
 
-	        	if(visible > 200)
-	        		$(this).find(".page-title").css("font-size", Math.sqrt(visible) * 3);
-	        }
+		var scrollTop = $(window).scrollTop(),
+            scrollBot = scrollTop + $(window).height(),
+            elTop = ptc.offset().top,
+            elBottom = elTop + ptc.outerHeight(),
+            visibleTop = elTop < scrollTop ? scrollTop : elTop,
+            visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+        var visible = visibleBottom - visibleTop > 0? visibleBottom - visibleTop: 0;
 
-	        var maxH = 1000;
-	        visible = visible <= maxH? visible: maxH;
-	        $(".background-image-over-layer").css("opacity", visible/maxH);
-	    });
+        if(visible > 200) {
+        	ptc.find(".page-title").height(visible);
+
+        	//if(visible > 200)
+        	//	ptc.find(".page-title").css("font-size", Math.sqrt(visible) * 3);
+        }
+
+        //var maxH = 1000;
+        //visible = visible <= maxH? visible: maxH;
+        //$(".background-image-over-layer").css("opacity", visible/maxH);
+
 	});
 
 	/* Fim - Iniciando cards */
@@ -111,7 +111,7 @@ $(document).ready(function() {
 
 		var body = $("html, body");
 		body.scrollTop(0);
-		body.stop().animate({scrollTop: ($(window).height() * .4)}, 500, 'swing', function() {
+		body.stop().animate({scrollTop: ($(window).height() * .4)}, 700, 'swing', function() {
 			enableScroll();
 		});
     }, 100);

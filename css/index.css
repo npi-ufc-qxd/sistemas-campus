@@ -1,5 +1,5 @@
 .background-image {
-	height: 90vh;
+	height: 100vh;
 	position: absolute;
 	top: 0;
 	left: 0; right: 0;
@@ -12,11 +12,12 @@
 	position: absolute;
 	top: 0; bottom: 0;
 	left: 0; right: 0;
+	opacity: 0.5;
 }
 
 .page-title-container {
 	position: absolute;
-	height: 80vh;
+	height: 90vh;
 }
 
 .page-title {
@@ -26,7 +27,6 @@
 	height: 80vh;
 	z-index: 1;
 	font-size: 52px;
-	padding: 20px;
 }
 
 .page-title > div {
@@ -46,9 +46,10 @@
 }
 
 .brasao {
-	height: 128px;
-	width: 96px;
-	background: url("../img/brasao.png") center / cover;
+	width: calc(192px / 2);
+	height: calc(192px / 2);
+	margin-top: 20px;
+	background: url("../img/icon_04_02.png") center / cover;
 	margin: auto;
 	z-index: 1;
 }
@@ -90,6 +91,18 @@
 	box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3);
 }
 
+.card-image {
+	padding: 20px;
+	background-color: rgba(63, 81, 186, .1);
+}
+
+.card-image img {
+	height: 128px;
+	width: 128px !important;
+	margin: auto;
+	z-index: 1;
+}
+
 .row .mcol.s12 {
     width: calc(100% - 16px);
 }
@@ -107,7 +120,7 @@
 }
 
 .main-row > div:nth-child(2) {
-	margin-top: 80vh;
+	margin-top: 90vh;
 }
 
 .card-icon {
