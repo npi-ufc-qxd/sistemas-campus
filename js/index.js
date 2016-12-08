@@ -4,6 +4,24 @@ $(document).ready(function() {
 
 	var cards = [
 		{ 
+			name: "SIPPA", 
+			description: "Sistemas de Presenças e Planos de Aula", 
+			image: "img/sippa.png", 
+			link: "https://sistemas.quixada.ufc.br/sippa"
+		}, 
+		{ 
+			name: "SAVI", 
+			description: "Sistemas de Avaliação Institucional", 
+			image: "img/savi.png", 
+			link: "https://sistemas.quixada.ufc.br/savi"
+		}, 
+		{ 
+			name: "SISAC", 
+			description: "Sistemas de Atividades Complementares", 
+			image: "img/sisac.png", 
+			link: "https://sistemas.quixada.ufc.br/sisac"
+		}, 
+		{ 
 			name: "GPA - Extensão", 
 			description: "Sistema de Gestão de Ações de Extensão do Campus da UFC em Quixadá.", 
 			image: "img/icon_08.png", 
@@ -12,13 +30,13 @@ $(document).ready(function() {
 		{ 
 			name: "GPA - Pesquisa", 
 			description: "Sistema de Projetos de Pesquisa.", 
-			image: "img/icon_09.png", 
+			image: "img/gpa-pesquisa.png", 
 			link: "https://sistemas.quixada.ufc.br/gpa-pesquisa"
 		}, 
 		{ 
 			name: "Contest", 
 			description: "Controle de Eventos de Submissão", 
-			image: "img/icon_11.png", 
+			image: "img/contest.png", 
 			link: "https://sistemas.quixada.ufc.br/contest"
 		}, 
 		{ 
@@ -50,6 +68,12 @@ $(document).ready(function() {
 			description: "Sistema para cadastro de aluno na base centralizada.", 
 			image: "img/icon_12.png", 
 			link: "http://cadastroaluno.intranet/"
+		}, 
+		{ 
+			name: "SIAF", 
+			description: "Sistema para gerenciamento de afastamentos de docentes.", 
+			image: "img/siaf.png", 
+			link: "http://cadastroaluno.intranet/"
 		}		
 	];
 
@@ -60,7 +84,7 @@ $(document).ready(function() {
 	cards.forEach(function(e, i) {
 		var card = toClone.clone();
 		for(k in e)
-			k == "image"? card.find(".card-" + k).find("img").attr("src", e[k]): 
+			k == "image"? card.find(".card-" + k).find("div").css("background", "url('" + e[k] + "') no-repeat center / contain"): 
 			k == "link"? card.attr("href", e[k]):
 			card.find(".card-" + k).text(e[k]);
 		var yOffset = 240 + (i * 5)/cards.length * 1000;
@@ -88,9 +112,9 @@ $(document).ready(function() {
         	//	ptc.find(".page-title").css("font-size", Math.sqrt(visible) * 3);
         }
 
-        //var maxH = 1000;
-        //visible = visible <= maxH? visible: maxH;
-        //$(".background-image-over-layer").css("opacity", visible/maxH);
+        var maxH = 1000;
+        visible = visible <= maxH? visible: maxH;
+        $(".background-image-over-layer").css("opacity", visible/maxH);
 
 	});
 
