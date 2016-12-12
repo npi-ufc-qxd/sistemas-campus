@@ -97,25 +97,30 @@ $(document).ready(function() {
 	var ptc = $('.page-title-container');
 	$(window).on('scroll resize', function() {
 
-		var scrollTop = $(window).scrollTop(),
-            scrollBot = scrollTop + $(window).height(),
-            elTop = ptc.offset().top,
-            elBottom = elTop + ptc.outerHeight(),
-            visibleTop = elTop < scrollTop ? scrollTop : elTop,
-            visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
-        var visible = visibleBottom - visibleTop > 0? visibleBottom - visibleTop: 0;
+		if($(window).width() > 601) {
+			var scrollTop = $(window).scrollTop(),
+	            scrollBot = scrollTop + $(window).height(),
+	            elTop = ptc.offset().top,
+	            elBottom = elTop + ptc.outerHeight(),
+	            visibleTop = elTop < scrollTop ? scrollTop : elTop,
+	            visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+	        var visible = visibleBottom - visibleTop > 0? visibleBottom - visibleTop: 0;
 
-        if(visible > 200) {
-        	ptc.find(".page-title").height(visible);
+	        if(visible > 200) {
+	        	ptc.find(".page-title").height(visible);
 
-        	//if(visible > 200)
-        	//	ptc.find(".page-title").css("font-size", Math.sqrt(visible) * 3);
-        }
+	        	//if(visible > 200)
+	        	//	ptc.find(".page-title").css("font-size", Math.sqrt(visible) * 3);
+	        }
+	    } else {
+	    	ptc.find(".page-title").height(128);
+	    }
 
-        var maxH = 1000;
-        visible = visible <= maxH? visible: maxH;
-        $(".background-image-over-layer").css("opacity", visible/maxH);
-
+        if($(window).width() > 601) {
+	        var maxH = 1000;
+	        visible = visible <= maxH? visible: maxH;
+	        $(".background-image-over-layer").css("opacity", visible/maxH);
+		}
 	});
 
 	/* Fim - Iniciando cards */
