@@ -5,49 +5,55 @@ $(document).ready(function() {
 	var cards = [
 		{ 
 			name: "SIPPA", 
-			description: "Sistemas de Presenças e Planos de Aula", 
+			description: "Sistema de Presenças e Planos de Aula", 
 			image: "img/sippa.png", 
 			link: "https://sistemas.quixada.ufc.br/sippa"
 		}, 
 		{ 
 			name: "SAVI", 
-			description: "Sistemas de Avaliação Institucional", 
+			description: "Sistema de Avaliação Institucional", 
 			image: "img/savi.png", 
 			link: "https://sistemas.quixada.ufc.br/savi"
 		}, 
 		{ 
 			name: "SISAC", 
-			description: "Sistemas de Atividades Complementares", 
+			description: "Sistema de Atividades Complementares", 
 			image: "img/sisac.png", 
 			link: "https://sistemas.quixada.ufc.br/sisac"
-		}, 
+		},
 		{ 
 			name: "GPA - Extensão", 
-			description: "Sistema de Gestão de Ações de Extensão do Campus da UFC em Quixadá.", 
+			description: "Sistema de Gestão de Ações de Extensão do Campus da UFC em Quixadá", 
 			image: "img/icon_08.png", 
-			link: "https://homologacaosistemas.quixada.ufc.br/extensao"
+			link: "https://sistemas.quixada.ufc.br/gpa-extensao"
 		}, 
 		{ 
 			name: "GPA - Pesquisa", 
-			description: "Sistema de Projetos de Pesquisa.", 
+			description: "Sistema de Projetos de Pesquisa", 
 			image: "img/gpa-pesquisa.png", 
 			link: "https://sistemas.quixada.ufc.br/gpa-pesquisa"
-		}, 
+		},
+		{ 
+			name: "SIAF", 
+			description: "Sistema para gerenciamento de afastamentos de docentes", 
+			image: "img/siaf.png", 
+			link: "http://sistemas.quixada.ufc.br/siaf"
+		},
 		{ 
 			name: "Contest", 
 			description: "Controle de Eventos de Submissão", 
 			image: "img/contest.png", 
 			link: "https://sistemas.quixada.ufc.br/contest"
-		}, 
+		},
 		{ 
 			name: "SINUTRI", 
-			description: "Sistema de Nutrição.", 
+			description: "Sistema de Nutrição", 
 			image: "img/icon_10.png", 
 			link: "https://sistemas.quixada.ufc.br/sinutri"
 		}, 
 		{ 
 			name: "GAL", 
-			description: "Sistema Gestão de Aquisição de Livros.", 
+			description: "Sistema Gestão de Aquisição de Livros", 
 			image: "img/icon_11.png", 
 			link: "https://sistemas.quixada.ufc.br/gal"
 		}, 
@@ -59,22 +65,16 @@ $(document).ready(function() {
 		}, 		
 		{ 
 			name: "Base Centralizada", 
-			description: "Sistema com as informações de dados pessoais de alunos e servidores do campus.", 
+			description: "Sistema unificado de cadastro de informações de alunos e servidores do campus", 
 			image: "img/icon_04_02.png", 
 			link: "http://identidadepessoa.intranet/"
 		},
 		{ 
 			name: "Cadastro Aluno", 
-			description: "Sistema para cadastro de aluno na base centralizada.", 
+			description: "Sistema para cadastro de aluno na base centralizada", 
 			image: "img/icon_12.png", 
 			link: "http://cadastroaluno.intranet/"
-		}, 
-		{ 
-			name: "SIAF", 
-			description: "Sistema para gerenciamento de afastamentos de docentes.", 
-			image: "img/siaf.png", 
-			link: "http://cadastroaluno.intranet/"
-		}		
+		}
 	];
 
 	var toClone = $(".clone");
