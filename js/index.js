@@ -74,6 +74,30 @@ $(document).ready(function() {
 			description: "Sistema para cadastro de aluno na base centralizada", 
 			image: "img/icon_12.png", 
 			link: "http://cadastroaluno.intranet/"
+		},
+		{ 
+			name: "Arquivos", 
+			description: "Sistema para armazenamento e compartilhamento de arquivos institucionais. Disponível somente para servidores do campus", 
+			image: "img/icon_arquivos.png", 
+			link: "http://arquivos.quixada.ufc.br"
+		},
+		{ 
+			name: "Helpdesk", 
+			description: "Sistema para gerenciar, com eficiência, as solicitações de TI. Disponível somente para servidores do campus", 
+			image: "img/logo_otrs.jpg", 
+			link: "http://helpdesk.quixada.ufc.br"
+		},
+		{ 
+			name: "Moodle", 
+			description: "Plataforma de aprendizagem a distância baseada em software livre", 
+			image: "img/logo-moodle.png", 
+			link: "http://moodle.quixada.ufc.br"
+		},
+		{ 
+			name: "Redmine", 
+			description: "Plataforma para gerenciamento de projetos baseado em software livre", 
+			image: "img/logo-redmine.png", 
+			link: "http://redmine.quixada.ufc.br"
 		}
 	];
 
