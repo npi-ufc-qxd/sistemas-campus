@@ -22,6 +22,12 @@ $(document).ready(function() {
 			link: "https://sistemas.quixada.ufc.br/sisac"
 		},
 		{ 
+			name: "Auxílio Moradia", 
+			description: "Sistema de inscrição do Programa Auxílio Moradia", 
+			image: "img/icon_08.png", 
+			link: "https://sistemas.quixada.ufc.br/assistencia-estudantil"
+		}, 
+		{ 
 			name: "GPA - Extensão", 
 			description: "Sistema de Gestão de Ações de Extensão do Campus da UFC em Quixadá", 
 			image: "img/icon_08.png", 
@@ -62,6 +68,12 @@ $(document).ready(function() {
 			description: "Sistema de Gestão de Estágio", 
 			image: "img/icon_12.png", 
 			link: "https://sistemas.quixada.ufc.br/gestao-estagio/"
+		}, 		
+		{ 
+			name: "Oferta Acadêmica", 
+			description: "Gestão da Oferta Acadêmica", 
+			image: "img/icon_13.png", 
+			link: "https://sistemas.quixada.ufc.br/oferta-academica/"
 		}, 		
 		{ 
 			name: "Base Centralizada", 
